@@ -5,8 +5,8 @@ from transformers import AutoModelForQuestionAnswering, AutoTokenizer
 # Load model + tokenizer
 @st.cache_resource
 def load_model():
-    model = AutoModelForQuestionAnswering.from_pretrained("qa_model")
-    tokenizer = AutoTokenizer.from_pretrained("qa_tokenizer")
+    model = AutoModelForQuestionAnswering.from_pretrained("qa-model")
+    tokenizer = AutoTokenizer.from_pretrained("qa-tokenizer")
     return model, tokenizer
 
 model, tokenizer = load_model()
