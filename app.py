@@ -1,19 +1,12 @@
-!pip install streamlit -q
-!pip install transformers -q
-!pip install torch -q
-
 import streamlit as st
 import torch
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer
 
-from google.colab import drive
-drive.mount('/content/drive')
-
 # Load model + tokenizer
 @st.cache_resource
 def load_model():
-    model = AutoModelForQuestionAnswering.from_pretrained("/content/drive/MyDrive/Models/Question_Answering/qa_model")
-    tokenizer = AutoTokenizer.from_pretrained("/content/drive/MyDrive/Models/Question_Answering/qa_tokenizer")
+    model = AutoModelForQuestionAnswering.from_pretrained("qa_model")
+    tokenizer = AutoTokenizer.from_pretrained("qa_tokenizer")
     return model, tokenizer
 
 model, tokenizer = load_model()
@@ -47,7 +40,3 @@ if st.button("Get Answer"):
         st.success(f"**Answer:** {answer}")
     else:
         st.warning("Please enter both context and question.")
-
-!jupyter nbconvert --to script "/content/drive/MyDrive/Colab Notebooks/Question_Answering_app/app.ipynb"
-
-!mv "/content/drive/MyDrive/Colab Notebooks/Question_Answering_app/app.txt" "/content/drive/MyDrive/Colab Notebooks/Question_Answering_app/app.py"
