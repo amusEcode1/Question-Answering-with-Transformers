@@ -1,5 +1,5 @@
 ## 🧠 Question Answering System
-This project is a Natural Language Processing (NLP) application that answers questions based on a provided passage or context using fine-tuned transformer models (e.g., DistilBERT, BERT-Large, RoBERTa, and Albert).
+This project is a Natural Language Processing (NLP) application that answers questions based on a provided passage or context using fine-tuned transformer models (e.g., **DistilBERT**, **BERT-Large**, **RoBERTa**, and **Albert**).
 
 ---
 
