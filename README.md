@@ -83,8 +83,10 @@ Simply paste a context passage, type a question, and click Get Answer to see the
 ```
 Question-Answering-with-Transformers/
 ├── app.py                    
-├── qa_model/                 
-├── qa_tokenizer/             
+├── qa_model/
+|   ├──...                
+├── qa_tokenizer/
+|   ├──...            
 ├── requirements.txt           
 └── README.md
 
